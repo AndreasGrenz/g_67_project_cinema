@@ -5,17 +5,27 @@ import java.util.Objects;
 public class Ticket {
     private Long id;
     private String titleMovie;
-    private String genre;
+    private Genre genre;
     private double price;
     private boolean active;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Ticket ticket = (Ticket) o;
-        return Double.compare(price, ticket.price) == 0 && active == ticket.active
-                && Objects.equals(id, ticket.id) && Objects.equals(titleMovie, ticket.titleMovie)
-                && Objects.equals(genre, ticket.genre);
+        return Double.compare(price, ticket.price) == 0 && active == ticket.active && Objects.equals(id, ticket.id) && Objects.equals(titleMovie, ticket.titleMovie) && genre == ticket.genre;
     }
 
     @Override
