@@ -21,6 +21,26 @@ public class Ticket {
         this.price = price;
     }
 
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public String getTitleMovie() {
+        return titleMovie;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
