@@ -10,6 +10,10 @@ public class Customer {
     private boolean active;
     private List<Ticket> cart = new ArrayList<>();
 
+    public Customer(String name) {
+        this.name = name;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
