@@ -9,6 +9,13 @@ public class Ticket {
     private double price;
     private boolean active;
 
+
+    public Ticket(double price, Genre genre, String titleMovie) {
+        this.price = price;
+        this.genre = genre;
+        this.titleMovie = titleMovie;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -56,6 +63,6 @@ public class Ticket {
     @Override
     public String toString() {
         return String.format("Ticket: id - %d, titleMovie - %s, genre - %s, price - %.2f, active - %b",
-                id, titleMovie,genre, price, active);
+                id, titleMovie, genre, price, active);
     }
 }

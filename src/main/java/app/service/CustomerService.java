@@ -71,7 +71,7 @@ public class CustomerService {
         customer.setActive(true);
     }
 
-    public int getActiveCustomersNUmber() {
+    public int getActiveCustomersNumber() {
         return getAllActiveCustomers().size();
     }
 
